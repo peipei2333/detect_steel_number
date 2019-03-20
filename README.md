@@ -63,13 +63,13 @@ After download the data, put it into /path/samples/gangjin/dataset, file structu
       - xxx.jpg
   - train_labels.csv
 ```
-#### 5.Oversample data(**Optional**) 
+#### 5.Oversample data (**Optional**) 
 ```bash
 cd samples/gangjin/
 python3 oversample_data.py
 python3 read_json.py
 ```
-#### 6. convert the csv format to json format
+#### 6. convert the csv format to json format (**Optional**) 
 ```bash
 python3 read_json.py
 ```
