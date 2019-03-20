@@ -36,7 +36,7 @@ augmentation = iaa.Sometimes(0.6,
 ## 使用方法
 1. Clone this repository
 ```bash
-git clone 
+git clone https://github.com/HarleysZhang/detect_steel_number.git
 ```
 2. Install dependencies
 ```bash
@@ -46,7 +46,7 @@ pip3 install -r requirements.txt
 ```bash
 python3 setup.py install
 ```
-4.Download the data and put it into /path/samples/gangjin/dataset, put the train_labels.csv into /path/samples/dataset/
+4.Download the data and put it into /path/samples/gangjin/dataset, file structure is:
 ```
 -gangjin
   - dataset/
@@ -62,7 +62,7 @@ python3 setup.py install
       - xxx.jpg
   - train_labels.csv
 ```
-5.Oversample data(Optional) and convert the csv format to json format
+5.Oversample data(**Optional**) and convert the csv format to json format
 ```bash
 cd samples/gangjin/
 python3 oversample_data.py
