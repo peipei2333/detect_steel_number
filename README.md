@@ -48,29 +48,33 @@ pip3 install -r requirements.txt
 ```bash
 python3 setup.py install
 ```
-4.Download the data and put it into /path/samples/dataset
-- dataset/
-  - rain/
-    - xxx.jpg
-    ...
-    - via_region_data.json
-  - val/
-    - xxx.jpg
-    ...
-    - via_region_data.json
-  - test/
-    - xxx.jpg
-
-5. convert the csv format to json format
+4.Download the data and put it into /path/samples/gangjin/dataset, put the train_labels.csv into /path/samples/dataset/
+```
+-gangjin
+  - dataset/
+    - rain/
+      - xxx.jpg
+      ...
+      - via_region_data.json
+    - val/
+      - xxx.jpg
+      ...
+      - via_region_data.json
+    - test/
+      - xxx.jpg
+  - train_labels.csv
+```
+5.Oversample data(Optional) and convert the csv format to json format
 ```bash
 cd samples/gangjin/
+python3 oversample_data.py
 python3 read_json.py
 ```
 6.train the model
 ```bash
 python3 gangjin.py
 ```
-6.predict
+7.predict
 ```bash
 python3 predict.py
 ```
