@@ -2,6 +2,8 @@
 DCIC 钢筋数量识别 baseline 0.98+
 ## 比赛地址
 [智能盘点—钢筋数量AI识别](https://www.datafountain.cn/competitions/332/details)
+## 环境依赖
+```ubuntu、tensorflow、keras、skimage、opencv-python、numpy、pandas、matplotlib等```
 ## 我的方案
 #### 关于检测/分割模型选择
 尝试了retinanet、faster rcnn、fpn和msak rcnn，其中mask rcnn目前得分0.998，从kaggle上得知使用U-Net全卷积网络进行语义分割可能效果比较好，目前还没有尝试。
