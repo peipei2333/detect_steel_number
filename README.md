@@ -36,3 +36,10 @@ augmentation = iaa.Sometimes(0.6,
                              ))
 ```
 ## 使用方法
+1. Clone this repository
+```git clone ```
+2. Install dependencies
+```pip3 install -r requirements.txt```
+3.Run setup from the repository root directory
+```python3 setup.py install
+4.Download the data and put it into /path/samples/dataset
