@@ -34,19 +34,20 @@ augmentation = iaa.Sometimes(0.6,
                              ))
 ```
 ## 使用方法
-1. Clone this repository
+#### 1. Clone this repository
 ```bash
 git clone https://github.com/HarleysZhang/detect_steel_number.git
 ```
-2. Install dependencies
+#### 2. Install dependencies
 ```bash
 pip3 install -r requirements.txt
 ```
-3.Run setup from the repository root directory
+#### 3. Run setup from the repository root directory
 ```bash
 python3 setup.py install
 ```
-4.Download the data and put it into /path/samples/gangjin/dataset, file structure is:
+#### 4.Download the data 
+After download the data, put it into /path/samples/gangjin/dataset, file structure is:
 ```
 -gangjin
   - dataset/
@@ -62,17 +63,21 @@ python3 setup.py install
       - xxx.jpg
   - train_labels.csv
 ```
-5.Oversample data(**Optional**) and convert the csv format to json format
+#### 5.Oversample data(**Optional**) 
 ```bash
 cd samples/gangjin/
 python3 oversample_data.py
 python3 read_json.py
 ```
-6.train the model
+#### 6. convert the csv format to json format
 ```bash
-python3 gangjin.py
+python3 read_json.py
 ```
-7.predict
+#### 7. train the model
+```bash
+python gangjin.py train --dataset=./dataset/ --weights=imagenet
+```
+#### 8. predict
 ```bash
 python3 predict.py
 ```
