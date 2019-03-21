@@ -4,7 +4,7 @@
 ```ubuntu, python3, tensorflow, keras, skimage, opencv-python, numpy, pandas, matplotlib等```
 ## 我的方案
 #### 关于检测/分割模型选择
-尝试了retinanet、faster rcnn、fpn和msak rcnn，其中mask rcnn目前得分0.998，从kaggle上得知使用U-Net全卷积网络进行语义分割可能效果比较好，目前还没有尝试。
+尝试了retinanet、faster rcnn、fpn和msak rcnn，其中mask rcnn目前得分0.980，从kaggle上得知使用U-Net全卷积网络进行语义分割可能效果比较好，目前还没有尝试。
 #### 关于优化器选择
 + 前期选择默认SGD优化器，后来在60epoch后选择用Adam优化器。
 + I found that the model reaches a local minima faster when trained using Adam optimizer compared to default SGD optimizer。
