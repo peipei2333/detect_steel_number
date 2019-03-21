@@ -13,7 +13,7 @@
 #### 关于训练策略
 Train in 3 stages: on 512x512 crops containing ships, then finetune on 1024x1024, and finally on 2048x2048. Inference on full-sized 2000x2666 images(由于时间关系没有尝试)
 #### 关于图像尺寸
-图像尺寸越大越好，但是注意至少要为2^6倍数，受限于硬件条件我这里是2040*2048。
+图像尺寸越大越好，但是注意至少要为2^6倍数，受限于硬件条件我这里是2048*2048。
 #### 关于数据增强
 我不确定数据增强是否有很大效果，下面是我的数据增强方式：
 ```python
