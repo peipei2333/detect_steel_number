@@ -83,3 +83,5 @@ python3 predict.py
 ```
 ## 模型效果
 DCIC 钢筋数量识别 baseline 0.98+
+## Reference
+[Mask R-CNN for object detection and instance segmentation on Keras and TensorFlow](https://github.com/matterport/Mask_RCNN)
