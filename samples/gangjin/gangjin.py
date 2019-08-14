@@ -76,7 +76,7 @@ class BalloonConfig(Config):
     # Skip detections with < 90% confidence
     DETECTION_MIN_CONFIDENCE = 0.9
 
-    LEARNING_RATE = 0.00001
+    LEARNING_RATE = 0.02
 
     # Non-max suppression threshold to filter RPN proposals.
     # You can increase this during training to generate more propsals.
@@ -86,7 +86,7 @@ class BalloonConfig(Config):
     DETECTION_MAX_INSTANCES = 450
 
     # Length of square anchor side in pixels
-    # RPN_ANCHOR_SCALES = (8, 16, 32, 64, 128)
+    RPN_ANCHOR_SCALES = (8, 16, 32, 64, 128)
 
     # How many anchors per image to use for RPN training
     RPN_TRAIN_ANCHORS_PER_IMAGE = 400
@@ -229,10 +229,14 @@ def train(model):
                                  ))
     model.train(dataset_train, dataset_val,
                 learning_rate=config.LEARNING_RATE,
-                epochs=150,
+                epochs=50,
                 layers='5+',
                 augmentation=augmentation)
-
+    model.train(dataset_train, dataset_val,
+                learning_rate=config.LEARNING_RATE/10,
+                epochs=70,
+                layers='5+',
+                augmentation=augmentation)
 
 def color_splash(image, mask):
     """Apply color splash effect.
