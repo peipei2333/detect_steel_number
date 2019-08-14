@@ -79,7 +79,7 @@ python3 read_json.py
 ```
 #### 7. train the model
 ```bash
-python gangjin.py train --dataset=./datasets/ --weights=imagenet
+python gangjin.py train --dataset=./datasets/ --weights=coco
 ```
 #### 8. predict
 ```bash
