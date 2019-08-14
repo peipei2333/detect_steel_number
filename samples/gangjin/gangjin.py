@@ -76,7 +76,7 @@ class BalloonConfig(Config):
     # Skip detections with < 90% confidence
     DETECTION_MIN_CONFIDENCE = 0.9
 
-    LEARNING_RATE = 0.02
+    LEARNING_RATE = 0.001
 
     # Non-max suppression threshold to filter RPN proposals.
     # You can increase this during training to generate more propsals.
