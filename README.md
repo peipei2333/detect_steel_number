@@ -1,3 +1,6 @@
+##peipei2333说明
+这次的实验主要参考别人的操作，尽快搞懂
+
 ## 比赛地址
 [智能盘点—钢筋数量AI识别](https://www.datafountain.cn/competitions/332/details)
 ## 环境依赖
